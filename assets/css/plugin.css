@@ -1,0 +1,110 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.tree li > div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 12px;
+  padding: 0 5px;
+  background-color: #dadada;
+  border: 1px solid black;
+  height: 24px;
+}
+
+@media (min-width: 800px) {
+  .tree li > div {
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tree div + ul {
+    padding-left: 24px;
+  }
+  .tree div + ul > li {
+    position: relative;
+  }
+  .tree div + ul > li::before {
+    display: block;
+    position: absolute;
+    content: "";
+    height: 100%;
+    left: -12px;
+    border-left: 1px solid black;
+  }
+  .tree div + ul > li::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 12px;
+    left: -12px;
+    top: 24px;
+    border-top: 1px solid black;
+  }
+  .tree div + ul > li:last-child::before {
+    height: 24px;
+  }
+}
+
+@media (min-width: 800px) {
+  .tree div + ul > li {
+    color: blue;
+    position: relative;
+  }
+  .tree div + ul > li::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 12px;
+    border-top: 1px solid black;
+  }
+  .tree div + ul > li::after {
+    display: block;
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 12px;
+    height: 12px;
+    border-left: 1px solid black;
+  }
+  .tree div + ul > li:first-child::before {
+    left: 50%;
+    width: 50%;
+  }
+  .tree div + ul > li:last-child::before {
+    width: 50%;
+    right: 50%;
+  }
+  .tree div + ul > li:only-child::before {
+    width: 0%;
+  }
+  .tree div + ul > li:only-child::after {
+    top: 0;
+    height: 24px;
+  }
+}
+
+@media (min-width: 800px) {
+  ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  li {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+/*# sourceMappingURL=plugin.css.map */
