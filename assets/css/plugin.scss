@@ -2,94 +2,43 @@ $treeElWidth: 100px;
 $treeElHeight: 24px;
 $color-1: rgb(218, 218, 218);
 $color-2: black;
-$breakpoint: 800px;
+$breakpoint1: 800px;
+$breakpoint2: 0px;
+
 
 * {
 	box-sizing: border-box;
 }
+.svg-wrapper {
+	position: absolute;
+}
+
 .tree {
+	position: relative;
 	li > div {
 		display: inline-flex;
 		align-items: center;
-		margin-top: 12px;
-		@media(min-width: $breakpoint) {margin-top: 24px;}
 		padding: 0 5px;
 		background-color: $color-1;
 		border: 1px solid $color-2;
 		height: $treeElHeight;
 	}
 	div {
-		@media(max-width: $breakpoint) {
+		@media(max-width: $breakpoint1) {
 			+ ul {
 				padding-left: 24px;
-				> li {
-					position: relative;
-					&::before {
-						display: block;
-						position: absolute;
-						content: "";
-						height: 100% ;
-						left: -12px;
-						border-left: 1px solid $color-2;
-					}
-					&::after {
-						display: block;
-						position: absolute;
-						content: "";
-						width: 12px;
-						left: -12px;
-						top: 24px;
-						border-top: 1px solid $color-2;
-					}
-				}
-				> li:last-child {
-					&::before {
-						height: 24px;
+				& > li {
+					& > div {
+						margin-top: 12px;
 					}
 				}
 			}
 		}
-		@media(min-width: $breakpoint) {
+		@media(min-width: $breakpoint1) {
 			+ ul {
-				> li {
-					color: blue;
-					position: relative;
-					&::before {
-						display: block;
-						position: absolute;
-						content: "";
-						width: 100%;
-						top: 12px;
-						border-top: 1px solid $color-2;
-					}
-					&::after {
-						display: block;
-						position: absolute;
-						content: "";
-						left: 50%;
-						top: 12px;
-						height: 12px;
-						border-left: 1px solid $color-2;
-					}
-				}
-				> li:first-child::before {
-					left: 50%;
-					width: 50%;
-				}
-				> li:last-child::before {
-					width: 50%;
-					right: 50%;
-				}
-				> li:only-child {
-					&::before {
-						width: 0%;
-						// height: 12px;
-						// top: 48px;
-						// border-left: 1px solid $color-2;
-					}
-					&::after {
-						top: 0;
-						height: 24px;
+				& > li {
+					& > div {
+						margin-top: 24px;
 					}
 				}
 			}
@@ -97,13 +46,13 @@ $breakpoint: 800px;
 	}
 }
 
-@media (min-width: $breakpoint) {
-	ul {
+@media (min-width: $breakpoint1) {
+	.tree, .tree ul {
 		display: flex;
 		text-align: center;
 		justify-content: center;
-	}
-	li {
-		flex-grow: 1;
+		& > li {
+			flex-grow: 1;
+		}
 	}
 }
