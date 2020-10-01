@@ -24,44 +24,43 @@ $breakpoint2: 600px;
 				flex-grow: 1;
 			}
 		}
-	}
-	li {
-		& > div {
-			display: inline-flex;
-			align-items: center;
-			padding: 0 5px;
-			background-color: $color-1;
-			border: 1px solid $color-2;
-			height: $treeElHeight;
-			+ ul {
-				@media(max-width: $breakpoint2) {
-					padding-left: 24px;
-					& > li {
-						& > div {
-							margin-top: 12px;
-						}
-					}
-				}
-				@media(min-width: $breakpoint1) {
-					& > li {
-						& > div {
-							margin-top: 24px;
-						}
-					}
-				}
-			}
-		}
-		@media(min-width: $breakpoint2) and (max-width: $breakpoint1) {
-			display: flex;
-			align-items: center;
+		& > li {
 			& > div {
-				margin-right: 24px;
-
+				display: inline-flex;
+				align-items: center;
+				padding: 0 5px;
+				background-color: $color-1;
+				border: 1px solid $color-2;
+				height: $treeElHeight;
+				+ ul {
+					@media(max-width: $breakpoint2) {
+						padding-left: 24px;
+						& > li {
+							& > div {
+								margin-top: 12px;
+							}
+						}
+					}
+					@media(min-width: $breakpoint1) {
+						& > li {
+							& > div {
+								margin-top: 24px;
+							}
+						}
+					}
+				}
 			}
-			& > ul > li:nth-child(n+2) {
-				margin-top: 12px;
+			@media(min-width: $breakpoint2) and (max-width: $breakpoint1) {
+				display: flex;
+				align-items: center;
+				& > div {
+					margin-right: 24px;
+	
+				}
+				& > ul > li:nth-child(n+2) {
+					margin-top: 12px;
+				}
 			}
 		}
 	}
 }
-

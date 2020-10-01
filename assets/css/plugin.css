@@ -28,7 +28,7 @@
   }
 }
 
-.tree li > div {
+.tree > li > div, .tree ul > li > div {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -42,22 +42,22 @@
 }
 
 @media (max-width: 600px) {
-  .tree li > div + ul {
+  .tree > li > div + ul, .tree ul > li > div + ul {
     padding-left: 24px;
   }
-  .tree li > div + ul > li > div {
+  .tree > li > div + ul > li > div, .tree ul > li > div + ul > li > div {
     margin-top: 12px;
   }
 }
 
 @media (min-width: 1000px) {
-  .tree li > div + ul > li > div {
+  .tree > li > div + ul > li > div, .tree ul > li > div + ul > li > div {
     margin-top: 24px;
   }
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
-  .tree li {
+  .tree > li, .tree ul > li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -65,10 +65,10 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .tree li > div {
+  .tree > li > div, .tree ul > li > div {
     margin-right: 24px;
   }
-  .tree li > ul > li:nth-child(n+2) {
+  .tree > li > ul > li:nth-child(n+2), .tree ul > li > ul > li:nth-child(n+2) {
     margin-top: 12px;
   }
 }
