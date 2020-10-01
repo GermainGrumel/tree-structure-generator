@@ -11,35 +11,7 @@
   position: relative;
 }
 
-.tree li > div {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 5px;
-  background-color: #dadada;
-  border: 1px solid black;
-  height: 24px;
-}
-
-@media (max-width: 800px) {
-  .tree div + ul {
-    padding-left: 24px;
-  }
-  .tree div + ul > li > div {
-    margin-top: 12px;
-  }
-}
-
-@media (min-width: 800px) {
-  .tree div + ul > li > div {
-    margin-top: 24px;
-  }
-}
-
-@media (min-width: 800px) {
+@media (min-width: 1000px) {
   .tree, .tree ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -53,6 +25,51 @@
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
+  }
+}
+
+.tree li > div {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5px;
+  background-color: #dadada;
+  border: 1px solid black;
+  height: 24px;
+}
+
+@media (max-width: 600px) {
+  .tree li > div + ul {
+    padding-left: 24px;
+  }
+  .tree li > div + ul > li > div {
+    margin-top: 12px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tree li > div + ul > li > div {
+    margin-top: 24px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  .tree li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .tree li > div {
+    margin-right: 24px;
+  }
+  .tree li > ul > li:nth-child(n+2) {
+    margin-top: 12px;
   }
 }
 /*# sourceMappingURL=plugin.css.map */
