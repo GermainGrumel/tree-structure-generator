@@ -1,10 +1,10 @@
 $treeElWidth: 100px;
 $treeElHeight: 24px;
-$color-1: #CFAA57;
+// $color-1: #4a8644;
 $color-2: white;
 $breakpoint1: 1000px;
 $breakpoint2: 600px;
-
+$colors: #04E762, #F5B700, #00A1E4, #DC0073, #89FC00;
 
 * {
 	box-sizing: border-box;
@@ -14,6 +14,29 @@ body{
 }
 .svg-wrapper {
 	position: absolute;
+}
+
+@keyframes bgFromTop {
+	from {
+		height: 0;
+	}
+	to {
+		height: 100%;
+	}
+}
+@keyframes bgFromLeft {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+$sel: ".tree ";
+@for $i from 1 through length($colors) {
+	@if $i > 1 { $sel: $sel + "ul "; }
+	#{$sel+"div"} { background-color: nth($colors, $i); }
 }
 
 .tree {
@@ -31,11 +54,10 @@ body{
 			& > div {
 				display: inline-flex;
 				font-size: 20px;
-				color: 414141;
+				color: rgba(255,255,255,.9);
 				align-items: center;
 				padding: 10px 10px;
-				background-color: $color-1;
-				border: 1px solid $color-2;
+				// border: 1px solid $color-2;
 				border-radius: 5px;
 				height: $treeElHeight;
 				+ ul {
@@ -52,7 +74,6 @@ body{
 							& > div {
 								margin-top: 24px;
 								font-size: 18px;
-								color: #414141;
 							}
 						}
 					}
@@ -63,7 +84,6 @@ body{
 				align-items: center;
 				& > div {
 					margin-right: 24px;
-	
 				}
 				& > ul > li:nth-child(n+2) {
 					margin-top: 12px;

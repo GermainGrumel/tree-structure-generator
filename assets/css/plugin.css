@@ -11,6 +11,62 @@ body {
   position: absolute;
 }
 
+@-webkit-keyframes bgFromTop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@keyframes bgFromTop {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes bgFromLeft {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes bgFromLeft {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.tree div {
+  background-color: #04E762;
+}
+
+.tree ul div {
+  background-color: #F5B700;
+}
+
+.tree ul ul div {
+  background-color: #00A1E4;
+}
+
+.tree ul ul ul div {
+  background-color: #DC0073;
+}
+
+.tree ul ul ul ul div {
+  background-color: #89FC00;
+}
+
 .tree {
   position: relative;
 }
@@ -37,13 +93,11 @@ body {
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 20px;
-  color: 414141;
+  color: rgba(255, 255, 255, 0.9);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 10px 10px;
-  background-color: #CFAA57;
-  border: 1px solid white;
   border-radius: 5px;
   height: 24px;
 }
@@ -61,7 +115,6 @@ body {
   .tree > li > div + ul > li > div, .tree ul > li > div + ul > li > div {
     margin-top: 24px;
     font-size: 18px;
-    color: #414141;
   }
 }
 
