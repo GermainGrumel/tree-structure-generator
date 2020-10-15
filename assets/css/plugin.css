@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+body {
+  background-color: #EBF4F9;
+}
+
 .svg-wrapper {
   position: absolute;
 }
@@ -32,12 +36,15 @@
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  font-size: 20px;
+  color: 414141;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 5px;
-  background-color: #dadada;
-  border: 1px solid black;
+  padding: 10px 10px;
+  background-color: #CFAA57;
+  border: 1px solid white;
+  border-radius: 5px;
   height: 24px;
 }
 
@@ -53,6 +60,8 @@
 @media (min-width: 1000px) {
   .tree > li > div + ul > li > div, .tree ul > li > div + ul > li > div {
     margin-top: 24px;
+    font-size: 18px;
+    color: #414141;
   }
 }
 

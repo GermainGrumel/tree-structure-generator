@@ -1,13 +1,16 @@
 $treeElWidth: 100px;
 $treeElHeight: 24px;
-$color-1: rgb(218, 218, 218);
-$color-2: black;
+$color-1: #CFAA57;
+$color-2: white;
 $breakpoint1: 1000px;
 $breakpoint2: 600px;
 
 
 * {
 	box-sizing: border-box;
+}
+body{
+	background-color: #EBF4F9;
 }
 .svg-wrapper {
 	position: absolute;
@@ -27,10 +30,13 @@ $breakpoint2: 600px;
 		& > li {
 			& > div {
 				display: inline-flex;
+				font-size: 20px;
+				color: 414141;
 				align-items: center;
-				padding: 0 5px;
+				padding: 10px 10px;
 				background-color: $color-1;
 				border: 1px solid $color-2;
+				border-radius: 5px;
 				height: $treeElHeight;
 				+ ul {
 					@media(max-width: $breakpoint2) {
@@ -45,6 +51,8 @@ $breakpoint2: 600px;
 						& > li {
 							& > div {
 								margin-top: 24px;
+								font-size: 18px;
+								color: #414141;
 							}
 						}
 					}
